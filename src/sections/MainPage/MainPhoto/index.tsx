@@ -5,8 +5,8 @@ import React from "react";
 function MainPhoto() {
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-slate-300">
-      <div className="absolute flex justify-center items-center flex-col">
-        <ShadowedTypography variant="h3" color={"white"} className="text-5xl">
+      <div className="absolute flex justify-center items-center flex-col max-w-[95vw]">
+        <ShadowedTypography variant="h3" color={"white"}>
           the premium ring, made only for the best
         </ShadowedTypography>
         <Button size="large" variant="contained" className="mt-4">
