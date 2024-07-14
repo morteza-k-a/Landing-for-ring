@@ -4,7 +4,7 @@ import { orange } from "@mui/material/colors";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const theme = createTheme({
-  direction: "rtl",
+  direction: "ltr",
   palette: {
     primary: { main: orange[200], dark: orange[300] },
   },
