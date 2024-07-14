@@ -37,7 +37,7 @@ function MobileMenu(props: {
 }) {
   return (
     <Drawer className="p-2" {...props}>
-      <div className="p-2">
+
         <List>
           {[1, 2, 3].map((num) => (
             <ListItem>
@@ -45,7 +45,7 @@ function MobileMenu(props: {
             </ListItem>
           ))}
         </List>
-      </div>
+
     </Drawer>
   );
 }
@@ -101,7 +101,7 @@ function AppHeader(props: { transparent: boolean }) {
   });
   return (
     <ScrollableBar>
-      <MobileContent scrolled={trigger} dir="rtl" />
+      <MobileContent scrolled={trigger} dir="ltr" />
     </ScrollableBar>
   );
 }
