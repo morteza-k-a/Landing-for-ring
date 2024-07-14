@@ -14,7 +14,7 @@ function AppLayout({
     
   return (
     <ThemeProvider theme={theme}>
-      <AppHeader/>
+      <AppHeader transparent={true}/>
       {children}
       <AppFooter/>
     </ThemeProvider>

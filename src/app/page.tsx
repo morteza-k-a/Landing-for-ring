@@ -6,8 +6,8 @@ function FirstPage() {
   return (
     <>
       <MainPhoto />
-      <PhotoGallery/>
-      <UpcomingProducts/>
+      <PhotoGallery />
+      <UpcomingProducts />
     </>
   );
 }
