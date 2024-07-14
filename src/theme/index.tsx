@@ -22,6 +22,18 @@ theme.typography.h3 = {
     fontSize: '2.4rem',
   },
 };
+theme.typography.h5 = {
+  fontSize: '1rem',
+  fontWeight:'600',
+  [theme.breakpoints.up('md')]: {
+    fontWeight:'500',
+    fontSize: '1.2rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    fontWeight:'400',
+    fontSize: '1.5rem',
+  },
+};
 // const ModifiedTheme = responsiveFontSizes(theme);
 
 export default theme;
