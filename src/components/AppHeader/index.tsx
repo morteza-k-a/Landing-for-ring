@@ -16,6 +16,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import { styled } from "@mui/material/styles";
+import { Search } from "@mui/icons-material";
 
 function useScrollableBar(props: { scrolled: boolean; transparent: boolean }) {
   if (props.transparent) {
@@ -37,15 +38,13 @@ function MobileMenu(props: {
 }) {
   return (
     <Drawer className="p-2" {...props}>
-
-        <List>
-          {[1, 2, 3].map((num) => (
-            <ListItem>
-              <ListItemButton>{` item number ${num}`}</ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-
+      <List>
+        {[1, 2, 3].map((num) => (
+          <ListItem>
+            <ListItemButton>{` item number ${num}`}</ListItemButton>
+          </ListItem>
+        ))}
+      </List>
     </Drawer>
   );
 }
@@ -55,12 +54,15 @@ function MobileContent(props: { scrolled: boolean; dir: "rtl" | "ltr" }) {
   return (
     <>
       <Toolbar
-        className={`flex ${
-          props.dir === "rtl"
-            ? "justify-between"
-            : "flex-row-reverse justify-end"
+        className={`flex justify-between ${
+          props.dir === "ltr" ? "flex-row-reverse" : "flex-row"
         }`}
       >
+        <div>
+          <IconButton>
+            <Search className={props.scrolled ? "" : "text-white"} />
+          </IconButton>
+        </div>
         <div className={`flex justify-center items-center `}>
           <DiamondIcon
             fontSize="large"
@@ -73,7 +75,7 @@ function MobileContent(props: { scrolled: boolean; dir: "rtl" | "ltr" }) {
         </div>
         <div>
           <IconButton
-            className={props.dir === "ltr" ? "pl-0" : ""}
+            // className={props.dir === "ltr" ? "pl-0" : ""}
             onClick={() => {
               setShowDrawer(true);
             }}
