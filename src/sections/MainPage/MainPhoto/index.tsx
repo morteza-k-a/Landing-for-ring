@@ -1,6 +1,7 @@
 import ShadowedTypography from "@/components/ShadowedTypography";
 import { Button } from "@mui/material";
 import React from "react";
+import statics from "@/components/Statics";
 
 function MainPhoto() {
   return (
@@ -16,7 +17,7 @@ function MainPhoto() {
       <img
         alt="mainIMG"
         className="object-cover max-h-screen w-full h-full"
-        src="/static/main3.jpg"
+        src={statics.firstPage?.mainImage}
       />
     </div>
   );
