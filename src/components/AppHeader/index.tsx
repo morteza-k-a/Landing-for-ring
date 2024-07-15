@@ -12,6 +12,8 @@ import {
   List,
   ListItem,
   ListItemButton,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import DiamondIcon from "@mui/icons-material/Diamond";
@@ -94,6 +96,26 @@ function MobileContent(props: { scrolled: boolean; dir: "rtl" | "ltr" }) {
     </>
   );
 }
+function PcContent(props: { scrolled: boolean }) {
+  return (
+    <Toolbar className="flex justify-between items-center flex-row-reverse">
+      <div>
+        {[1, 2, 3].map((num) => (
+          <Button color="inherit">{` item number ${num}`}</Button>
+        ))}
+      </div>
+      <div className="flex justify-center flex-row items-center">
+        <DiamondIcon
+          fontSize="large"
+          className={props.scrolled ? "" : "text-white"}
+        />
+        <Typography className={"ml-2"} variant="h5">
+          COMPANY NAME
+        </Typography>
+      </div>
+    </Toolbar>
+  );
+}
 
 function AppHeader(props: { transparent: boolean }) {
   const trigger = useScrollTrigger({ threshold: 0, disableHysteresis: true });
@@ -101,9 +123,15 @@ function AppHeader(props: { transparent: boolean }) {
     transparent: props.transparent,
     scrolled: trigger,
   });
+  const theme = useTheme();
+  const screenIsLarge: boolean = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <ScrollableBar>
-      <MobileContent scrolled={trigger} dir="ltr" />
+      {!screenIsLarge ? (
+        <MobileContent scrolled={trigger} dir="ltr" />
+      ) : (
+        <PcContent scrolled={trigger} />
+      )}
     </ScrollableBar>
   );
 }
