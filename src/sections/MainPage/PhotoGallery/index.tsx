@@ -6,7 +6,7 @@ import SmoothImage from "@/components/SmoothImage";
 function PcGallery() {
   return (
     <>
-      <div className="flex p-2 w-full h-[40vh] lg:h-[60vh] xl:h-[80vh] lg:p-4 flex-row justify-center items-center">
+      <div className="flex px-2 py-4 w-full h-[40vh] lg:h-[60vh] xl:h-[80vh] lg:p-4 flex-row justify-center items-center">
         <SmoothImage
           className="object-cover h-full w-5/12"
           src={statics.firstPage?.gallery?.image1}
@@ -44,7 +44,7 @@ function PcGallery() {
 
 function PhotoGallery() {
   return (
-    <div className="flex items-center p-4 flex-col">
+    <div className="flex items-center px-4 py-8 flex-col">
       <Typography variant="h5"> GALLERY </Typography>
       <PcGallery />
     </div>
