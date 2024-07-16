@@ -10,6 +10,9 @@ function Content() {
       <ShadowedTypography variant="h3" color={"white"}>
         the premium ring, made only for the best
       </ShadowedTypography>
+      <ShadowedTypography className="mt-4" color={"white"} variant="h6">
+        limited sale, buy now
+      </ShadowedTypography>
       <Button size="large" variant="contained" className="mt-4">
         learn more
       </Button>
@@ -19,7 +22,7 @@ function Content() {
 
 function MainPhoto() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-slate-300">
+    <div className="h-svh flex flex-col items-center justify-center bg-slate-300">
       <div className="absolute h-full flex justify-between items-center flex-col max-w-[95vw]">
         <div></div>
         <Content />
