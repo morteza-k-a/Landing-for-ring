@@ -3,6 +3,8 @@ import { Button } from "@mui/material";
 import React from "react";
 import statics from "@/components/Statics";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Image from "next/image";
+import MainImg from "../../../../public/static/firstPage/main.jpg";
 
 function Content() {
   return (
@@ -26,16 +28,17 @@ function MainPhoto() {
       <div className="absolute h-full flex justify-between items-center flex-col max-w-[95vw]">
         <div></div>
         <Content />
-        <div  className="pb-4 animate-bounce">
+        <div className="pb-4 animate-bounce">
           <ShadowedTypography color={"white"}>
-            <KeyboardArrowDownIcon fontSize="large"/>
+            <KeyboardArrowDownIcon fontSize="large" />
           </ShadowedTypography>
         </div>
       </div>
-      <img
+      <Image
+        placeholder="blur"
         alt="mainIMG"
         className="object-cover max-h-screen w-full h-full"
-        src={statics.firstPage?.mainImage}
+        src={MainImg}
       />
     </div>
   );

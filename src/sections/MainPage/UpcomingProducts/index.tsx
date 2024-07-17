@@ -4,6 +4,9 @@ import statics from "@/components/Statics";
 import { Button, useTheme } from "@mui/material";
 import React from "react";
 import ShadowedTypography from "@/components/ShadowedTypography";
+import Image from "next/image";
+import WatchImg from "../../../../public/static/firstPage/watch.jpg";
+import InsImg from "../../../../public/static/firstPage/instrument.jpg";
 
 function ImageContent({
   title,
@@ -28,9 +31,7 @@ function ImageContent({
         >
           {text}
         </ShadowedTypography>
-        <Button size="small" >
-          more information
-        </Button>
+        <Button size="small">more information</Button>
       </div>
     </div>
   );
@@ -52,18 +53,20 @@ function UpcomingProducts() {
     <div className="w-full flex flex-row my-2 h-[75vw] lg:h-[50vw]">
       <UpcomingTitle title={"OUR UPCOMING PRODUCTS"} />
       <div className="w-1/2">
-        <CustomImage
+        <Image
           className="w-full object-cover h-full"
-          src={statics.firstPage?.upcoming?.watch}
+          src={WatchImg}
           alt="watch"
+          placeholder="blur"
         />
         <ImageContent text="available for pre-order" title="watch" />
       </div>
       <div className="w-1/2">
-        <CustomImage
+        <Image
           className="w-full object-cover h-full"
-          src={statics.firstPage?.upcoming?.instrument}
+          src={InsImg}
           alt="watch"
+          placeholder="blur"
         />
         <ImageContent
           text="available for pre-order"
