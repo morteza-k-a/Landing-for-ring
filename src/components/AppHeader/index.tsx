@@ -65,7 +65,7 @@ function MobileContent(props: { scrolled: boolean; dir: "rtl" | "ltr" }) {
         }`}
       >
         <div>
-          <IconButton>
+          <IconButton aria-label="search">
             <Search className={props.scrolled ? "" : "text-white"} />
           </IconButton>
         </div>
@@ -81,6 +81,7 @@ function MobileContent(props: { scrolled: boolean; dir: "rtl" | "ltr" }) {
         </div>
         <div>
           <IconButton
+          aria-label="sideMenu"
             // className={props.dir === "ltr" ? "pl-0" : ""}
             onClick={() => {
               setShowDrawer(true);

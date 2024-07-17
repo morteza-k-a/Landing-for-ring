@@ -11,13 +11,13 @@ function AppFooter() {
         follow us on social media
       </Typography>
       <div>
-        <IconButton>
+        <IconButton aria-label="X">
           <XIcon className="text-white" />
         </IconButton>
-        <IconButton>
+        <IconButton aria-label="instagram">
           <InstagramIcon className="text-white" />
         </IconButton>
-        <IconButton>
+        <IconButton aria-label="telegram"> 
           <TelegramIcon className="text-white" />
         </IconButton>
       </div>
