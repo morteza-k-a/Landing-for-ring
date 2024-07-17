@@ -41,11 +41,15 @@ function MobileMenu(props: {
   return (
     <Drawer className="p-2" {...props}>
       <List>
-        {[1, 2, 3].map((num) => (
-          <ListItem>
-            <ListItemButton>{` item number ${num}`}</ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem>
+          <ListItemButton>{`products`}</ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton>{`about us`}</ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton>{`FAQ`}</ListItemButton>
+        </ListItem>
       </List>
     </Drawer>
   );
@@ -100,9 +104,9 @@ function PcContent(props: { scrolled: boolean }) {
   return (
     <Toolbar className="flex justify-between items-center flex-row-reverse">
       <div>
-        {[1, 2, 3].map((num) => (
-          <Button color="inherit">{` item number ${num}`}</Button>
-        ))}
+          <Button color="inherit">{`products`}</Button>
+          <Button color="inherit">{`about us`}</Button>
+          <Button color="inherit">{`FAQ`}</Button>
       </div>
       <div className="flex justify-center flex-row items-center">
         <DiamondIcon
