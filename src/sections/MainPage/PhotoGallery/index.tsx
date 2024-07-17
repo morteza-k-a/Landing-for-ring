@@ -21,7 +21,7 @@ function PcGallery() {
         <Image
           src={Img1}
           alt="img1"
-          className="object-cover h-full  w-5/12"
+          className="object-cover h-full  w-5/12 shadow-lg rounded-lg"
           placeholder="blur"
         />
 
@@ -30,7 +30,7 @@ function PcGallery() {
             <div className="h-full w-1/2 pr-2 lg:pr-4">
               <Image
                 placeholder="blur"
-                className="object-cover h-full w-full"
+                className="object-cover h-full w-full shadow-lg rounded-lg"
                 src={Img2}
                 alt={"image2"}
               />
@@ -38,7 +38,7 @@ function PcGallery() {
             <div className="h-full w-1/2 pl-2 lg:pl-2">
               <Image
                 placeholder="blur"
-                className="object-cover h-full w-full "
+                className="object-cover h-full w-full shadow-lg rounded-lg"
                 src={Img3}
                 alt={"image3"}
               />
@@ -47,7 +47,7 @@ function PcGallery() {
           <div className="w-full h-1/2 pl-4 lg:pl-8">
             <Image
               placeholder="blur"
-              className="object-cover h-full w-full"
+              className="object-cover h-full w-full shadow-lg rounded-lg"
               src={Img4}
               alt={"image4"}
             />
